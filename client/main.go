@@ -38,7 +38,7 @@ func main() {
 }
 
 func performRequest(client *http.Client, req *http.Request) {
-	fmt.Println("Sending request 1")
+	fmt.Println("Sending request")
 	resp, err := client.Do(req)
 	if err != nil {
 		panic(err)
