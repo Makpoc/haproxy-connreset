@@ -24,6 +24,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	// comment out setting ContentLength to do a Transfer-Encoding: chunked transfer
+
 	req1.ContentLength = payloadSize
 	performRequest(http.DefaultClient, req1)
 
