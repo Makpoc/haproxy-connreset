@@ -19,4 +19,19 @@ Start the server
 Run the client
 --------------
 
+### Use the go client
+
     cd client && go run main.go "http://localhost:8080"
+
+### Use curl
+```bash
+curl -kv \
+  -X PUT \
+  -H "Expect:" \
+  --data-binary @/tmp/put_body \
+  "http://127.0.0.1:8080/" \
+  --next \
+  -X PATCH -d '{"message": value}' \
+  -H "Content-type: application/json" \
+  "http://127.0.0.1:8080/"
+```
